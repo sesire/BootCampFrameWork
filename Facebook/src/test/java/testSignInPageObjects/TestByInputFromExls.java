@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import signInPageObjects.ByInputFromExls;
 import signInPageObjects.SignInPage;
-import testHomePageObjects.HomePage;
+import AlibabaHomePage.HomePage;
 
 import java.io.IOException;
 

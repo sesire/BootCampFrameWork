@@ -40,17 +40,17 @@ public class CommonAPI {
 
 
     public WebDriver driver = null;
-    public String browserstack_username= "uzzalpalma1";
-    public String browserstack_accesskey = "omssYaay2i2U1Bax4pdm";
+    public String browserstack_username= "sesireislam1";
+    public String browserstack_accesskey = "fvzZ8NzdbNKzsxupPC5n";
     public String saucelabs_username = "";
     public String saucelabs_accesskey = "";
 
     @Parameters({"useCloudEnv","cloudEnvName","os","os_version","browserName","browserVersion","url"})
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false")String cloudEnvName,
-                      @Optional("OS X") String os,@Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("34")
+                      @Optional("OS X") String os,@Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("74.0")
                                   String browserVersion, @Optional("https://www.facebook.com/") String url)throws IOException {
-        System.setProperty("webdriver.chrome.driver", "/SeleniumProject/MavenProject/TestAutomation/Generic/brwoser-driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/tawhidurislam/intellij/BootCampFrameWork/Generic/drivers/chromedriver 4");
         if(useCloudEnv==true){
             if(cloudEnvName.equalsIgnoreCase("browserstack")) {
                 getCloudDriver(cloudEnvName,browserstack_username,browserstack_accesskey,os,os_version, browserName, browserVersion);
@@ -60,7 +60,7 @@ public class CommonAPI {
         }else{
             getLocalDriver(os, browserName);
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
@@ -68,18 +68,18 @@ public class CommonAPI {
     public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", "/SeleniumProject/MavenProject/TestAutomation/Generic/brwoser-driver/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/Users/tawhidurislam/intellij/BootCampFrameWork/Generic/drivers/chromedriver 4");
             }else if(OS.equalsIgnoreCase("Windows")){
-                System.setProperty("webdriver.chrome.driver", "../Generic/browser-driver/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "../Users/tawhidurislam/intellij/BootCampFrameWork/Generic/drivers/chromedriver 3.exe");
             }
             driver = new ChromeDriver();
         } else if(browserName.equalsIgnoreCase("chrome-options")){
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-notifications");
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", "/SeleniumProject/MavenProject/TestAutomation/Generic/brwoser-driver/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/Users/tawhidurislam/intellij/BootCampFrameWork/Generic/drivers/chromedriver 4");
             }else if(OS.equalsIgnoreCase("Windows")){
-                System.setProperty("webdriver.chrome.driver", "../Generic/browser-driver/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "../Users/tawhidurislam/intellij/BootCampFrameWork/Generic/drivers/chromedriver 3.exe");
             }
             driver = new ChromeDriver(options);
         }

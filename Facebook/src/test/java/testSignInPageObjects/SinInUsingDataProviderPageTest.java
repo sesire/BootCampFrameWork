@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import productsPageObjects.ProductsPage;
 import reporting.TestLogger;
 import signInPageObjects.SignInPage;
-import testHomePageObjects.HomePage;
+import AlibabaHomePage.HomePage;
 
 import java.util.ArrayList;
 import java.util.Iterator;

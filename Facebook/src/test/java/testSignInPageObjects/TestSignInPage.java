@@ -8,7 +8,7 @@ import org.testng.asserts.SoftAssert;
 import productsPageObjects.ProductsPage;
 import reporting.TestLogger;
 import signInPageObjects.SignInPage;
-import testHomePageObjects.HomePage;
+import AlibabaHomePage.HomePage;
 
 public class TestSignInPage extends SignInPage {
     HomePage objOfHomePage;

@@ -5,7 +5,7 @@ import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.support.PageFactory;
 import signInPageObjects.ByInputFromExls;
 import signInPageObjects.SignInPage;
-import testHomePageObjects.HomePage;
+import AlibabaHomePage.HomePage;
 
 import java.io.IOException;
 
@@ -30,7 +30,7 @@ public class Features extends CommonAPI {
     }
     public void searchProduct(){
         objOfHomePage.searchProduct();
-        System.out.println("Search for Jahid");
+        System.out.println("Search for tawhid");
     }
 
     public void selectAction(String featureName) throws IOException, InterruptedException {

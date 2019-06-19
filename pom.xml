@@ -10,8 +10,10 @@
     <modules>
         <module>Generic</module>
         <module>Facebook</module>
-        <module>Amazone</module>
-        <module>PNT</module>
+        <module>Amazon</module>
+        <module>Cigna</module>
+        <module>CNN</module>
+        <module>CitiBank</module>
     </modules>
     <dependencyManagement>
         <dependencies>
